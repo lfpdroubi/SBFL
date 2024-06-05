@@ -38,7 +38,7 @@ var institucional = $.ajax({
   // Add the variable for each of your AJAX requests to $.when()
   $.when(quadras, limites, areasVerdes, institucional).done(function() {
 
-  var mappos = L.Permalink.getMapLocation(zoom = 15, center = [-27.66676,-48.54549]);
+  var mappos = L.Permalink.getMapLocation(zoom = 15, center = [-27.67252,-48.54008]);
 
   var map = L.map('map', {
     center: mappos.center,
