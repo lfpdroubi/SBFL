@@ -99,7 +99,7 @@ var institucional = $.ajax({
 	ext: 'png'
   });
 
-  var LIMITES = L.geoJSON(limites.responseJSON, {
+  var LIMITES = L.Proj.geoJson(limites.responseJSON, {
     style: {
       color: 'yellow',
       weight: 2
@@ -121,7 +121,7 @@ var institucional = $.ajax({
 		zoomOffset: -1
 	}).addTo(map);
 */
-  var Quadras = L.geoJSON(quadras.responseJSON, {
+  var Quadras = L.Proj.geoJson(quadras.responseJSON, {
     style: {
       color: 'blue',
       weight: 2
@@ -133,7 +133,7 @@ var institucional = $.ajax({
     }
   }).addTo(map);
 
-  var AreasVerdes = L.geoJSON(areasVerdes.responseJSON, {
+  var AreasVerdes = L.Proj.geoJson(areasVerdes.responseJSON, {
     style: {
       color: 'green',
       weight: 2
@@ -145,7 +145,7 @@ var institucional = $.ajax({
     }
   }).addTo(map);
 
-  var Institucional = L.geoJSON(institucional.responseJSON, {
+  var Institucional = L.Proj.geoJson(institucional.responseJSON, {
     style: {
       color: 'orange',
       weight: 2
