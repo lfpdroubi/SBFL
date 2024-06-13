@@ -128,7 +128,8 @@ var institucional = $.ajax({
     },
     onEachFeature: function( feature, layer ){
       layer.bindPopup(
-        "<b>Área (m2): </b>" + feature.properties.Area
+        "<b>Área (m2): </b>" + feature.properties.Area + "<br>" +
+        "<b>Lotes de 360 m2: </b>" + feature.properties.lotes
       );
     }
   }).addTo(map);
